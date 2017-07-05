@@ -32,7 +32,7 @@ Eg. for a much more creamy GitHub experience create `~/.joof/github.com.css`:
 
 ```css
 body { background-color: papayawhip }
-svg[class*='octicon'] { transform: rotate(180deg); }
+svg[class*='octicon-mark-github'] { transform: rotate(180deg); }
 ```
 
 <img src='https://s3.brnbw.com/Screen-Shot-2017-07-05-at-11.42.57-zNJKFuWnp5.png' alt='PapayaHub' width=366 />

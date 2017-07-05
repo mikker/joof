@@ -3,6 +3,7 @@ const Listr = require("Listr");
 const path = require("path");
 const fs = require("fs");
 const home = require("user-home");
+const sudo = require("sudo-prompt");
 
 module.exports = setup;
 
@@ -21,9 +22,15 @@ function setup(flags) {
     {
       title: "Install self-signed certificate for localhost",
       skip: flags.skipCert,
-      task: () => installCert(flags)
+      task: (ctx, task) => installCert(flags).catch(err => task.skip())
+    },
+    {
+      title: "Install Safari extension",
+      task: () => installSafariExtension()
     }
   ]);
+
+  return tasks.run();
 
   function createJoofDir(flags) {
     return execa("mkdir", ["-p", flags.joofDir]).then(
@@ -58,19 +65,26 @@ function setup(flags) {
   }
 
   function installCert(flags) {
-    return execa("sudo", [
-      "security",
-      "add-trusted-cert",
-      "-d",
-      "-p",
-      "ssl",
-      "-k",
-      "/Library/Keychains/System.keychain",
-      path.join(__dirname, "support", "self-signed.crt")
-    ]).stdout.pipe(process.stdout);
+    return new Promise((resolve, reject) => {
+      const task = sudo.exec(
+        [
+          "security add-trusted-cert -d -p ssl -k",
+          "/Library/Keychains/System.keychain",
+          path.join(__dirname, "support", "self-signed.crt")
+        ].join(" "),
+        { name: "joof" },
+        (err, stdout, stderr) => {
+          console.log(err.toString());
+          if (err) reject(err);
+          resolve();
+        }
+      );
+    });
   }
 
-  return tasks.run();
+  function installSafariExtension () {
+    return execa('open', [path.join(__dirname, 'ext', 'joof.safariextz')])
+  }
 }
 
 function fileExists(path) {
