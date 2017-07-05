@@ -8,11 +8,13 @@
     <true/>
     <key>ProgramArguments</key>
     <array>
-      <string>/Users/mikker/dev/joof/joof</string>
+      <string>{NODE_PATH}</string>
+      <string>{CLI_PATH}</string>
+      <string>serve</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>WorkingDirectory</key>
-    <string>/Users/mikker/.js/</string>
+    <string>{JOOF_DIR}/</string>
   </dict>
 </plist>
