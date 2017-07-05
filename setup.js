@@ -74,7 +74,6 @@ function setup(flags) {
         ].join(" "),
         { name: "joof" },
         (err, stdout, stderr) => {
-          console.log(err.toString());
           if (err) reject(err);
           resolve();
         }
