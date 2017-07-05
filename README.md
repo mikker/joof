@@ -1,5 +1,9 @@
 <h1><center><img src='https://s3.brnbw.com/Joof-title-gq1SN6Paes.png' width=530 height=260 /></center></h1>
 
+[![npm](https://img.shields.io/npm/v/joof.svg)](https://www.npmjs.com/package/joof)
+[![npm](https://img.shields.io/npm/l/joof.svg)](https://github.com/mikker/joof/blob/master/LICENSE)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 **`joof` allows you to add custom JavaScript or CSS to any webpage.**
 
 It does so by injecting `.js` and `.css` files in `~/.joof` with a browser extension and a tiny webserver running in the background.
