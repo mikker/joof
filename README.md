@@ -22,7 +22,7 @@ This will …
 1. Create the `~/.joof` directory
 2. Install the daemon as a macOS service running on `https://localhost:3131`
 3. Accept a self-signed certificate to allow `https` requests from `localhost`
-4. Install a Safari extension
+4. Install the Safari extension
 
 ## Usage
 
