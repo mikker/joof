@@ -1,15 +1,29 @@
 {
   "name": "joof",
-  "bin": "cli.js",
   "version": "0.1.1",
+  "description": "Add custom JavaScript or CSS to any webpage",
+  "bin": "cli.js",
   "scripts": {
-    "pkg": "pkg .",
     "start": "node cli.js serve",
     "dev": "nodemon --exec 'npm start'"
   },
+  "keywords": [
+    "js",
+    "css",
+    "browser-extension",
+    "customization",
+    "macos",
+    "safari"
+  ],
+  "author": "Mikkel Malmberg <mikkel@brnbw.com> (https://mikkelmalmberg.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikker/joof.git"
+  },
+  "homepage": "https://github.com/mikker/joof",
   "devDependencies": {
-    "nodemon": "^1.11.0",
-    "pkg": "^4.1.1"
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "execa": "^0.7.0",
@@ -17,13 +31,5 @@
     "meow": "^3.7.0",
     "sudo-prompt": "^7.1.0",
     "user-home": "^2.0.0"
-  },
-  "pkg": {
-    "assets": [
-      "support/**/*"
-    ],
-    "targets": [
-      "node8"
-    ]
   }
 }
