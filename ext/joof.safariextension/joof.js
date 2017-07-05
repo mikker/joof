@@ -1,6 +1,14 @@
 function apply(script) {
   if (document.body) {
-    if (script) eval(script);
+    if (script) {
+      try {
+        eval(script);
+      } catch (e) {
+        console.groupCollapsed('%cjoof failed eval\'ing your script', 'color:red')
+        console.error(e)
+        console.groupEnd()
+      }
+    }
   } else {
     setTimeout(function() {
       apply(script);
