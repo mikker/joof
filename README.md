@@ -40,8 +40,8 @@ svg[class*='octicon-mark-github'] { transform: rotate(180deg); }
 When visiting `github.com` joof will look for 3 files in `~/.joof`:
 
 1. `global.js`
-2. `google.com.js`
-3. `google.com.css`
+2. `github.com.js`
+3. `github.com.css`
 
 ## Limitations
 
