@@ -61,6 +61,7 @@ async function handleUrl(flags, url) {
   const cssPath = jsPath.replace(/\.js$/, ".css");
 
   let jsContent = (await readFile(globalJsPath)) || "";
+  jsContent += ";\n" // make sure that global.js ends with a semicolon
   jsContent += (await readFile(jsPath)) || "";
 
   const cssContent = await readFile(cssPath);
