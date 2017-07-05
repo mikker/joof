@@ -1,7 +1,7 @@
 {
   "name": "joof",
   "bin": "cli.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "pkg": "pkg .",
     "start": "node cli.js serve",
