@@ -28,6 +28,10 @@ This will …
 3. Accept a self-signed certificate to allow `https` requests from `localhost`
 4. Install the Safari extension
 
+### Chrome extension
+
+There's also a Chrome extension. [Download it here](https://github.com/mikker/joof/raw/master/ext/chrome.crx). To complete the installation, open https://localhost:3131 in Chrome and click `ADVANCED` then `Proceed to localhost` to accept the self-signed certificate.
+
 ## Usage
 
 Create `.js` or `.css` files in `~/.joof` with filenames matching the domain of the website you want to spice up.
