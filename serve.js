@@ -8,7 +8,7 @@ module.exports = serve;
 function serve(flags) {
   const options = {
     key: fs.readFileSync(path.join(__dirname, "support", "self-signed.key")),
-    cert: fs.readFileSync(path.join(__dirname, "support", "self-signed.crt"))
+    cert: fs.readFileSync(path.join(__dirname, "support", "self-signed.pem"))
   };
 
   return new Promise(resolve => {

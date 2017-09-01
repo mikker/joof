@@ -70,7 +70,7 @@ function setup(flags) {
         [
           "security add-trusted-cert -d -p ssl -k",
           "/Library/Keychains/System.keychain",
-          path.join(__dirname, "support", "self-signed.crt")
+          path.join(__dirname, "support", "self-signed.pem")
         ].join(" "),
         { name: "joof" },
         (err, stdout, stderr) => {
