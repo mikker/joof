@@ -1,6 +1,6 @@
 {
   "name": "joof",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Add custom JavaScript or CSS to any webpage",
   "bin": "cli.js",
   "scripts": {
