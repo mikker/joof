@@ -16,6 +16,8 @@ If this sounds like [dotjs](https://github.com/defunkt/dotjs) it's because it is
 
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mikker/joof.svg)](https://greenkeeper.io/)
+
 ```sh
 $ npm install -g joof
 $ joof setup
