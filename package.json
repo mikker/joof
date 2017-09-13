@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node cli.js serve",
     "dev": "nodemon --exec 'npm start'",
-    "setup": "node cli.js setup"
+    "setup": "node cli.js setup",
+    "test": "echo '🔥'"
   },
   "keywords": [
     "js",
