@@ -28,7 +28,7 @@ function serve(flags) {
 function createHandler(flags) {
   return (req, res) => {
     if (req.url === "/") {
-      res.setHeader("Content-Type", "text/plain");
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
       res.write("joof is on da roof!");
       res.end();
       return;
@@ -38,7 +38,7 @@ function createHandler(flags) {
       .then(
         body => {
           res.setHeader("Access-Control-Allow-Origin", "*");
-          res.setHeader("Content-Type", "text/javascript");
+          res.setHeader("Content-Type", "text/javascript; charset=utf-8");
           res.write(body);
           res.end();
         },
