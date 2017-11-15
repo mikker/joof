@@ -3,25 +3,16 @@
   "manifest_version": 2,
   "version": "1.0",
   "description": "Add custom scripts and styles to any webpage",
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
   "content_scripts": [
     {
       "all_frames": true,
       "run_at": "document_start",
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "joof.js"
-      ]
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["joof.js"]
     }
   ],
   "permissions": [
-    "tabs"
-  ],
-  "web_accessible_resources": []
+    "*://localhost/*"
+  ]
 }
