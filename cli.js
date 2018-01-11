@@ -19,21 +19,33 @@ const cli = meow(
 
   Examples
     $ joof serve
-    $ joof setup \
-        --skipService \
-        --skipCert \
-        --nodePath /usr/local/bin/node \
-        --joofDir ~/.joof
+    $ joof setup --skipService --skipCert --nodePath /usr/local/bin/node --joofDir ~/.joof
 `,
   {
-    alias: {
-      c: "skipCert",
-      s: "skipService"
-    },
-    default: {
-      cliPath: __filename,
-      joofDir: path.join(home, ".joof"),
-      nodePath: "/usr/local/bin/node"
+    flags: {
+      cliPath: {
+        type: 'string',
+        default: __filename
+      },
+      skipCert: {
+        type: 'boolean',
+        default: false,
+        alias: 'c'
+      },
+      skipService: {
+        type: 'boolean',
+        default: false,
+        alias: 's'
+      },
+      joofDir: {
+        type: 'string',
+        default: path.join(home, ".joof"),
+        alias: 'd'
+      },
+      nodePath: {
+        type: 'string',
+        default: "/usr/local/bin/node"
+      }
     }
   }
 );
