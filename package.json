@@ -28,7 +28,7 @@
     "nodemon": "^1.14.10"
   },
   "dependencies": {
-    "execa": "^0.9.0",
+    "execa": "^0.10.0",
     "listr": "^0.13.0",
     "meow": "^4.0.0",
     "sudo-prompt": "^8.1.0",
