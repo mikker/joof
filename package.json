@@ -30,7 +30,7 @@
   "dependencies": {
     "execa": "^0.10.0",
     "listr": "^0.14.0",
-    "meow": "^4.0.0",
+    "meow": "^5.0.0",
     "sudo-prompt": "^8.1.0",
     "user-home": "^2.0.0"
   }
