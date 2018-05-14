@@ -1,6 +1,15 @@
-<h1><center><img src='https://s3.brnbw.com/Joof-title-gq1SN6Paes.png' width=530 height=260 /></center></h1>
+<p align='center'><img src='https://s3.brnbw.com/Joof-title-gq1SN6Paes.png' width=530 height=260 /></p>
 
-[![Travis](https://img.shields.io/travis/mikker/joof.svg)](https://travis-ci.org/mikker/joof) [![npm](https://img.shields.io/npm/v/joof.svg)](https://www.npmjs.com/package/joof) [![npm](https://img.shields.io/npm/l/joof.svg)](https://github.com/mikker/joof/blob/master/LICENSE) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+<p align='center'>
+  <a href='https://travis-ci.org/mikker/joof'><img src='https://img.shields.io/travis/mikker/joof.svg' /></a>
+  <a href='https://www.npmjs.com/package/joof'><img src='https://img.shields.io/npm/v/joof.svg' /></a>
+  <a href='https://github.com/mikker/joof/blob/master/LICENSE'><img src='https://img.shields.io/npm/l/joof.svg' /></a>
+  <a href='https://github.com/prettier/prettier'><img src='https://img.shields.io/badge/styled_with-prettier-ff69b4.svg' /></a>
+</p>
+
+<p> </p>
+
+---
 
 **`joof` allows you to add custom JavaScript or CSS to any webpage.**
 
