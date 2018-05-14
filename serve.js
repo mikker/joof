@@ -5,7 +5,7 @@ const promisify = require("util").promisify;
 
 module.exports = serve;
 
-function serve(flags) {
+function serve(flags = {}) {
   const options = {
     key: fs.readFileSync(path.join(__dirname, "support", "self-signed.key")),
     cert: fs.readFileSync(path.join(__dirname, "support", "self-signed.pem"))
@@ -14,14 +14,14 @@ function serve(flags) {
   return new Promise(resolve => {
     const handler = createHandler(flags);
     const server = https.createServer(options, handler);
+    const port = flags.port || 3131;
 
-    server.listen(3131, err => {
-      if (err) throw err;
-      console.log("running on port 3131");
-      resolve();
+    server.listen(port, err => {
+      if (err) reject(err);
+
+      if (!flags.quiet) console.info(`running on port ${port}`);
+      resolve(server);
     });
-
-    return server;
   });
 }
 
@@ -61,7 +61,7 @@ async function handleUrl(flags, url) {
   const cssPath = jsPath.replace(/\.js$/, ".css");
 
   let jsContent = (await readFile(globalJsPath)) || "";
-  jsContent += ";\n" // make sure that global.js ends with a semicolon
+  jsContent += ";\n"; // make sure that global.js ends with a semicolon
   jsContent += (await readFile(jsPath)) || "";
 
   const cssContent = await readFile(cssPath);

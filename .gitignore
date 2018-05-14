@@ -1,3 +1,5 @@
 node_modules
 /joof
 chrome.pem
+yarn.lock
+package-lock.json

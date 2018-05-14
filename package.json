@@ -7,7 +7,7 @@
     "start": "node cli.js serve",
     "dev": "nodemon --exec 'npm start'",
     "setup": "node cli.js setup",
-    "test": "echo '🔥'"
+    "test": "tape test/**/*_test.js | tap-spec"
   },
   "keywords": [
     "js",
@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/mikker/joof",
   "devDependencies": {
-    "nodemon": "^1.14.10"
+    "got": "^8.3.1",
+    "nodemon": "^1.14.10",
+    "tape": "^4.9.0",
+    "tap-spec": "^4.1.1"
   },
   "dependencies": {
     "execa": "^0.10.0",
