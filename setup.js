@@ -81,8 +81,12 @@ function setup(flags) {
     });
   }
 
-  function installSafariExtension () {
-    return execa('open', [path.join(__dirname, 'ext', 'joof.safariextz')])
+  async function installSafariExtension () {
+    await execa('cp', [
+      path.join(__dirname, 'ext', 'joof.safariextz'),
+      path.join(__dirname, 'ext', 'joof-copy.safariextz')
+    ])
+    return execa('open', [path.join(__dirname, 'ext', 'joof-copy.safariextz')])
   }
 }
 
