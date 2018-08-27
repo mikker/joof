@@ -31,7 +31,7 @@
     "tap-spec": "^5.0.0"
   },
   "dependencies": {
-    "execa": "^0.11.0",
+    "execa": "^1.0.0",
     "listr": "^0.14.0",
     "meow": "^5.0.0",
     "sudo-prompt": "^8.1.0",
