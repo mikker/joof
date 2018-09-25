@@ -1,6 +1,6 @@
 {
   "name": "joof",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Add custom JavaScript or CSS to any webpage",
   "bin": "cli.js",
   "scripts": {
@@ -27,8 +27,8 @@
   "devDependencies": {
     "got": "^9.0.0",
     "nodemon": "^1.14.10",
-    "tape": "^4.9.0",
-    "tap-spec": "^5.0.0"
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.0"
   },
   "dependencies": {
     "execa": "^1.0.0",
