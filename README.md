@@ -11,6 +11,10 @@
 
 ---
 
+<h1 align='center'>🚨 Joof is no longer maintained in this form.<br>Instead it lives on as a native Mac app at <a href='https://joof.app'>Joof.app</a></h1>
+
+---
+
 **`joof` allows you to add custom JavaScript or CSS to any webpage.**
 
 It does so by injecting `.js` and `.css` files in `~/.joof` with a browser extension and a tiny webserver running in the background.
