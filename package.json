@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/mikker/joof",
   "devDependencies": {
-    "got": "^9.0.0",
+    "got": "^10.0.3",
     "nodemon": "^1.14.10",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.0"
